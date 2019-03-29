@@ -1,0 +1,3 @@
+rootProject.name = 'apuestasReact'
+
+include ':app'
