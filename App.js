@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import Router from './src/Router';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,13 +19,10 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Router />
     );
   }
 }
@@ -36,14 +34,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
+  titulo: {
+    fontSize: 30,
     textAlign: 'center',
-    margin: 10,
+    marginBottom: 50
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
+    marginBottom: 5
   },
+  error: {
+    textAlign: 'center',
+    color: '#ff0000',
+    marginBottom: 5
+  },
+  botonStyle: {
+    textAlign: 'center',
+    padding: 10,
+    margin: 20
+  }
 });
