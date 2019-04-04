@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import { Input, Boton } from './lib';
 import firebase from 'firebase';
+import { Actions } from 'react-native-router-flux';
 
 class Login extends Component {
   
@@ -45,8 +46,7 @@ class Login extends Component {
   }
 
   loginExitoso(){
-    console.log("Adentro");
-    this.setState({ adentro: false });
+    Actions.Home()
   }
 
   loginError(){
